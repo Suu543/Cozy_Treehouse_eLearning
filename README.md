@@ -39,3 +39,43 @@ npm i axios
 models/user.js
 utils/auth.js
 ```
+
+## Part-5: Registration
+```javascript
+// Toast Alert
+npm i react-toastify
+
+// Loading Spinner
+Slow 3G - Throttling
+
+// Env and gitignore files
+// Custom next dev server (for dev mode only)
+/*
+Nextjs setup custom server
+- to use cookie based auth system we need to have both client and server running on same origin/domain
+- We need to use proxy for that because our client/nextjs is running on 3000
+- and our server is running on 8000
+
+Use Proxy in nextjs
+- To use proxy we need to create custom server,
+- This is only for development mode
+- In production, we will use same origin/domain so we don't have to worry about it.
+- We can simply run build then start next app
+
+*/
+// Client 
+npm i http-proxy-middleware
+https://nextjs.org/docs/advanced-features/custom-server
+```
+## Part-6: Login
+```javascript
+/*
+Server
+- To login user we need to check if user's password is correct
+- We need to take user's password, hash it then compare with the hashed password with the saved one
+- Then we need to generate jsonwebtoken / JWT and send it to client
+- This will be used to access protected routes
+
+npm i jsonwebtoken
+*/
+```

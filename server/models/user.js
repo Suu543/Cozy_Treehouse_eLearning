@@ -24,7 +24,7 @@ const userSchema = new Schema(
     },
 
     picture: {
-      tyep: String,
+      type: String,
       default: "/avatar.png",
     },
 
