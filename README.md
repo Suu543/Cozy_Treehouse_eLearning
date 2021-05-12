@@ -98,3 +98,24 @@ Protected Route
 ```javascript
 npm i express-jwt
 ```
+
+## Part-8: Sending Email and Password Reset
+```javascript
+npm i aws-sdk
+
+```
+How Password reset works?
+1. User will enter email address
+2. You will find that user based on email address from DB
+3. If found, you will create password reset code
+4. Then you will save that code in DB and also send to that user's email
+5. If this is the correct user, he will have access to his email
+6. He can copy that copy and paste in the form, enter new password then hit submit
+7. On submit, our server will receive the user's email and code
+8. You will try to find the user based on the email and code
+9. If found, update his old password with new one and reset code back to empty
+10. Done...
+
+```javascript
+npm i nanoid
+```

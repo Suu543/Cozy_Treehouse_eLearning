@@ -40,6 +40,9 @@ const Register = () => {
       });
       // toast(...) Rainbow Color
       toast.success("Registration Successful. Please Login.");
+      setName("");
+      setEmail("");
+      setPassword("");
       setLoading(false);
     } catch (err) {
       // toast(err.response.data); Rainbow Color
