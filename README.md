@@ -79,3 +79,22 @@ Server
 npm i jsonwebtoken
 */
 ```
+
+## Part-7: Global State, CSRF, axios interceptors and protected routes
+Axios Interceptors:
+- Axios interceptors are functions that Axios calls for every request. You can use intereptors to transform the request before Axios sends it,
+- or transform the response before Axios returns the response to your code. You can think of interceptors as Axios equivalent to middleware in Express or Mongoose
+
+What is CSRF (Cross-Site Request Forgery)?
+- https://www.synopsys.com/glossary/what-is-csrf.html
+```javascript
+npm i csurf
+```
+
+Protected Route
+- Create a protected page and restrict only to logged in user with valid token
+- To verify if token is valid, you need to send request to backend (Browser will include cookie token in headers automatically)
+- If you get successful response then you can show the protected page to the user
+```javascript
+npm i express-jwt
+```
