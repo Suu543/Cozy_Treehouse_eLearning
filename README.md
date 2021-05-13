@@ -119,3 +119,22 @@ How Password reset works?
 ```javascript
 npm i nanoid
 ```
+
+## Part-9: Stripe OnBoarding
+SETUP Stripe Payment
+- Use stripe connect (check supported countries)
+- Receive payment from users
+- Automate the payment distribution
+- 70% to sellers (instructors) and keep 30% as platform fee
+- Get paid every 48 hours directly to bank account by strip
+
+Conditional links and pages
+- In topNav, show a link
+- If user role includes 'Instructor', show link that says 'Create Course'
+- Else show link that says 'Become Instructor'
+
+Stripe Callback Page
+- Once user completes onboarding process
+- He gets redirected back to /stripe/callback
+- Use useEffect to make request to backend to fetch the updated user info from stripes
+- This updated info must have payment_enabled set to true 

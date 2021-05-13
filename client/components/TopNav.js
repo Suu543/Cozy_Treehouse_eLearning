@@ -8,6 +8,8 @@ import {
   LoginOutlined,
   LogoutOutlined,
   UserAddOutlined,
+  CarryOutOutlined,
+  TeamOutlined,
 } from "@ant-design/icons";
 import { Context } from "../context";
 import { toast } from "react-toastify";
@@ -50,6 +52,28 @@ const TopNav = () => {
         </Link>
       </Item>
 
+      {user && user.role && user.role.includes("Instructor") ? (
+        <Item
+          key="/instructor/course/create"
+          onClick={(e) => setCurrent(e.key)}
+          icon={<CarryOutOutlined />}
+        >
+          <Link href="/instructor/course/create">
+            <a>Create Course</a>
+          </Link>
+        </Item>
+      ) : (
+        <Item
+          key="/user/become-instructor"
+          onClick={(e) => setCurrent(e.key)}
+          icon={<TeamOutlined />}
+        >
+          <Link href="/user/become-instructor">
+            <a>Become Instructor</a>
+          </Link>
+        </Item>
+      )}
+
       {user === null && (
         <>
           <Item
@@ -61,7 +85,6 @@ const TopNav = () => {
               <a>Login</a>
             </Link>
           </Item>
-
           <Item
             key="/register"
             onClick={(e) => setCurrent(e.key)}
